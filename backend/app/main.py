@@ -31,6 +31,37 @@ def classify_ticket(subject: str, description: str) -> str:
     return "General Inquiry"
 
 
+def detect_priority(subject: str, description: str) -> str:
+    text = f"{subject} {description}".lower()
+
+    high_priority_words = [
+        "urgent",
+        "critical",
+        "blocked",
+        "security",
+        "fraud",
+        "hacked",
+        "data loss"
+    ]
+
+    medium_priority_words = [
+        "failed",
+        "unable",
+        "error",
+        "not working",
+        "problem",
+        "issue"
+    ]
+
+    if any(word in text for word in high_priority_words):
+        return "High"
+
+    if any(word in text for word in medium_priority_words):
+        return "Medium"
+
+    return "Low"
+
+
 @app.get("/")
 def home():
     return {
@@ -52,8 +83,14 @@ def create_ticket(ticket: SupportTicket):
         ticket.description
     )
 
+    priority = detect_priority(
+        ticket.subject,
+        ticket.description
+    )
+
     return {
         "message": "Ticket received successfully",
         "ticket": ticket,
-        "category": category
+        "category": category,
+        "priority": priority
     }
