@@ -1,17 +1,32 @@
+# Python
 .venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .env
+
+# IDE/editor files
 .vscode/
 .idea/
 
+# Raw dataset
 data/raw/*
-data/processed/*
-data/golden_set/*
 !data/raw/.gitkeep
-!data/processed/.gitkeep
-!data/golden_set/.gitkeep
 
+# Generated processed data
+data/processed/*.csv
+data/processed/*.txt
+data/processed/*
+!data/processed/.gitkeep
+!data/processed/intent_definitions.json
+
+# Golden-set files
+data/golden_set/*
+!data/golden_set/.gitkeep
+!data/golden_set/golden_set_labeled.csv
+!data/golden_set/golden_set_template.csv
+
+# Logs and OS files
 *.log
 .DS_Store
+Thumbs.db

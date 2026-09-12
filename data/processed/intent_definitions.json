@@ -1,0 +1,74 @@
+{
+  "delivery_issue": {
+    "description": "Late, missing, delayed, or incorrectly tracked delivery",
+    "examples": [
+      "My package has not arrived",
+      "The parcel was out for delivery but never arrived",
+      "Where is my order?"
+    ]
+  },
+  "delivery_date_confusion": {
+    "description": "Confusion about the promised or displayed delivery date",
+    "examples": [
+      "One day delivery is showing a later date",
+      "Why has my delivery date changed?",
+      "The delivery date is incorrect"
+    ]
+  },
+  "refund_cancellation": {
+    "description": "Request to cancel an order or receive a refund",
+    "examples": [
+      "I want to cancel my order",
+      "Please refund my money",
+      "How can I get a refund?"
+    ]
+  },
+  "product_replacement": {
+    "description": "Damaged, defective, missing, or incorrect product",
+    "examples": [
+      "The product arrived damaged",
+      "My speaker is not working",
+      "I received the wrong item"
+    ]
+  },
+  "prime_membership_billing": {
+    "description": "Prime membership, free trial, renewal, subscription, or unexpected charge",
+    "examples": [
+      "I was charged after my Prime trial",
+      "Why was my Prime membership renewed?",
+      "I want to cancel my Prime subscription"
+    ]
+  },
+  "account_order_privacy": {
+    "description": "Account access, order details, personal information, or publicly shared order information",
+    "examples": [
+      "I cannot access my account",
+      "I posted my order number publicly",
+      "Please remove my personal information"
+    ]
+  },
+  "technical_device_issue": {
+    "description": "App, website, Alexa, device, or other technical problem",
+    "examples": [
+      "Alexa is not working",
+      "The Amazon app keeps crashing",
+      "The website shows an error"
+    ]
+  },
+  "digital_content_support": {
+    "description": "Prime Video, Kindle, digital content, or other digital services",
+    "examples": [
+      "Prime Video is not playing",
+      "My Kindle book is missing",
+      "I cannot access digital content"
+    ]
+  },
+  "general_feedback": {
+    "description": "General complaints, appreciation, or messages without a specific support issue",
+    "examples": [
+      "Your service is terrible",
+      "Thanks for helping me",
+      "This website is frustrating"
+    ]
+  }
+}
