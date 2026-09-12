@@ -13,6 +13,24 @@ class SupportTicket(BaseModel):
     customer_email: EmailStr
 
 
+def classify_ticket(subject: str, description: str) -> str:
+    text = f"{subject} {description}".lower()
+
+    if any(word in text for word in ["login", "password", "otp", "sign in"]):
+        return "Account/Login Issue"
+
+    if any(word in text for word in ["payment", "refund", "invoice", "billing"]):
+        return "Payment/Billing Issue"
+
+    if any(word in text for word in ["bug", "error", "crash", "not working", "technical"]):
+        return "Technical Issue"
+
+    if any(word in text for word in ["account", "profile", "email change"]):
+        return "Account Issue"
+
+    return "General Inquiry"
+
+
 @app.get("/")
 def home():
     return {
@@ -29,7 +47,13 @@ def health_check():
 
 @app.post("/tickets")
 def create_ticket(ticket: SupportTicket):
+    category = classify_ticket(
+        ticket.subject,
+        ticket.description
+    )
+
     return {
         "message": "Ticket received successfully",
-        "ticket": ticket
+        "ticket": ticket,
+        "category": category
     }
