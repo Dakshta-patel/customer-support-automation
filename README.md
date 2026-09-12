@@ -1,118 +1,30 @@
-\# Hiver Customer Support Agent
+# Customer Support Automation
 
+A backend project for automating customer support request handling, classification, and response generation.
 
+## Overview
 
-A customer-support automation and evaluation project built using the Customer Support on Twitter dataset.
+The goal of this project is to build a customer support automation system that can:
 
+- Accept customer support requests
+- Classify requests based on their content
+- Generate suitable responses
+- Suggest the next action for each request
+- Improve the consistency and efficiency of support operations
 
-
-\## Objective
-
-
-
-The goal is to build a support agent that can:
-
-
-
-\- Understand customer-support queries
-
-\- Identify support intents
-
-\- Retrieve relevant historical resolutions
-
-\- Generate grounded responses
-
-\- Decide when a case should be escalated
-
-\- Evaluate response quality using a labelled golden set
-
-\- Compare the system against simple baselines
-
-\- Measure response quality using automated and human evaluation
-
-
-
-\## Project Status
-
-
-
-Initial project setup.
-
-
-
-\## Planned Components
-
-
-
-\- Dataset inspection
-
-\- Brand selection
-
-\- Intent definition
-
-\- Historical-resolution retrieval
-
-\- Response generation
-
-\- Escalation classification
-
-\- Golden-set creation
-
-\- Baseline systems
-
-\- LLM-as-judge evaluation
-
-\- Human agreement analysis
-
-\- Final report
-
-\- Decision log
-
-
-
-\## Project Structure
-
-
+## Project Structure
 
 ```text
-
-hiver-support-agent/
-
+customer-support-automation/
 │
-
 ├── backend/
-
 │   └── app/
-
-│       ├── \_\_init\_\_.py
-
+│       ├── __init__.py
 │       └── main.py
-
 │
-
-├── data/
-
-│   ├── raw/
-
-│   ├── processed/
-
-│   └── golden\_set/
-
-│
-
 ├── docs/
-
-│   └── decision\_log.md
-
+│   └── decision_log.md
 │
-
-├── reports/
-
-├── tests/
-
-├── requirements.txt
-
+├── .gitignore
 ├── README.md
-
-└── .gitignore
-
+└── requirements.txt
